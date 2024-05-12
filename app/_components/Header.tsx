@@ -17,9 +17,9 @@ const colors = [
 
 export default function Header() {
   return (
-    <header className="dark:bg-slate-800 py-4 text-white mb-16 col-span-12">
+    <header className="dark:bg-slate-900 bg-red-100 py-4 text-white mb-16 col-span-12">
       <Container>
-        <nav className="flex justify-between col-span-12">
+        <nav className="flex justify-between items-center col-span-12">
           {["Dima", "Ilia", "Max", "Anya"].map((text, index) => (
             <Link href={`/${text.toLowerCase()}`} key={text}>
               <span
