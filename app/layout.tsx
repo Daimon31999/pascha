@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Knewave } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "./_components/Header";
 import Container from "./_components/Container";
 import { ThemeProvider } from "./_components/theme-provider";
+import BackgroundSvg from "./_components/BackgroundSvg";
 
-const inter = Inter({ subsets: ["latin"] });
+// const knewave = Knewave({ subsets: ["latin"], weight: "400" });
+
+const virgil = localFont({
+  src: "../public/fonts/virgil.woff2",
+  variable: "--virgil",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,15 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className)}>
+      <body className={cn(virgil.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark", "moschino"]}
         >
           <Header />
-          <Container>{children}</Container>
+          <Container className="relative mt-24 z-10">{children}</Container>
+          <BackgroundSvg className="fixed z-0 top-0 left-0 w-full h-full fill-orangeMoschino dark:fill-skyMoschino" />
         </ThemeProvider>
       </body>
     </html>
