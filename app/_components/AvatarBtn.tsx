@@ -27,7 +27,10 @@ export default function AvatarBtn() {
         <DropdownMenuTrigger asChild>
           <Avatar className="cursor-pointer">
             <AvatarImage src="https://avatars.githubusercontent.com/u/58564568?v=4" />
-            <AvatarFallback>CN</AvatarFallback>
+
+            <AvatarFallback>
+              <div className="w-10 h-10 rounded-full bg-skyMoschino animate-pulse"></div>
+            </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
@@ -42,7 +45,7 @@ export default function AvatarBtn() {
                   <Sun className="mr-2 h-4 w-4 dark:text-skyMoschino" />
                 )}
                 {theme === "dark" && (
-                  <Sun className="mr-2 h-4 w-4 dark:text-skyMoschino" />
+                  <Moon className="mr-2 h-4 w-4 dark:text-skyMoschino" />
                 )}
                 {theme === "moschino" && (
                   <TreePalm className="mr-2 h-4 w-4 dark:text-orangeMoschino" />

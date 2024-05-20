@@ -38,7 +38,7 @@ export default function RootLayout({
           themes={["light", "dark", "moschino"]}
         >
           <Header />
-          <Container className="relative mt-24 z-10">{children}</Container>
+          <Container className="relative mt-40 z-10">{children}</Container>
           <BackgroundSvg className="fixed z-0 top-0 left-0 w-full h-full fill-orangeMoschino dark:fill-skyMoschino" />
         </ThemeProvider>
       </body>

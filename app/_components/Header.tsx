@@ -16,7 +16,7 @@ const links = [
           "",
           "whitespace-break-spaces transition-all flex hover:text-skyMoschino dark:text-red-400 dark:hover:text-red-300 duration-300"
         )}
-      >{`Место\nвстречь`}</span>
+      >{`Место\nвстреч`}</span>
     ),
   },
   {
